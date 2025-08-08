@@ -34,12 +34,23 @@
       padding: 2rem;
       background-color: var(--card);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      gap: 2rem;
     }
 
     header .info {
       display: flex;
       flex-direction: column;
       gap: 0.3rem;
+      flex: 1;
+    }
+
+    header .center-text {
+      flex: 1;
+      color: #bbb;
+      font-style: italic;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
     }
 
     header img {
@@ -48,16 +59,7 @@
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid var(--accent);
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-
-    header p {
-      font-size: 0.95rem;
-      color: #aaa;
+      flex-shrink: 0;
     }
 
     main {
@@ -176,6 +178,9 @@
       <h1>João Vithor Toporoski Araújo</h1>
       <p>Programador · Técnico em Informática</p>
       <p>Londrina/PR · <a href="mailto:contato@toporoski.dev.br">contato@toporoski.dev.br</a></p>
+    </div>
+    <div class="center-text">
+      <p>Transformando ideias em soluções digitais com segurança e eficiência.</p>
     </div>
     <img src="sua-foto-aqui.jpg" alt="João Vithor Toporoski Araújo" />
   </header>
