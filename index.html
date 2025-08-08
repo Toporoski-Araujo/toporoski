@@ -11,6 +11,7 @@
       --text: #e0e0e0;
       --accent: #d4af37;
       --card: #1a1a1a;
+      --center: #2c2c2c;
     }
 
     * {
@@ -24,9 +25,6 @@
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
 
     header {
@@ -63,11 +61,23 @@
     }
 
     main {
-      flex: 1;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: 1fr 2fr 1fr;
       gap: 2rem;
       padding: 2rem;
+    }
+
+    .side, .middle {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .middle {
+      background-color: var(--center);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
     section {
@@ -75,7 +85,6 @@
       padding: 1.5rem;
       border-radius: 0.5rem;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      height: fit-content;
     }
 
     h2 {
@@ -96,8 +105,8 @@
 
     .links {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+      flex-direction: column;
+      gap: 0.5rem;
     }
 
     .links a {
@@ -109,6 +118,18 @@
 
     .links a:hover {
       background: #3a3a3a;
+    }
+
+    .skill-bar {
+      background: #333;
+      border-radius: 3px;
+      overflow: hidden;
+      margin: 0.5rem 0;
+    }
+
+    .skill-level {
+      background: var(--accent);
+      height: 1rem;
     }
 
     footer {
@@ -129,72 +150,71 @@
     <img src="sua-foto-aqui.jpg" alt="João Vithor Toporoski Araújo">
   </header>
   <main>
-    <section>
-      <h2>Resumo</h2>
-      <p>Trabalho há 2 anos com suporte de TI remoto e presencial. Desenvolvi habilidades sólidas em comunicação técnica e profissional com clientes e colegas. Tenho experiência em equipamentos de rede como Sophos, Mikrotik e pfSense. Atuo também com identificação e resolução ágil de problemas em computadores.</p>
-      <p>Especializado em segurança digital, com forte domínio em redes e programação. Falo português fluentemente e possuo inglês intermediário.</p>
-    </section>
+    <div class="side">
+      <section>
+        <h2>Skills RPG</h2>
+        <div>Programação</div>
+        <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
+        <div>Redes</div>
+        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+        <div>Segurança Digital</div>
+        <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+        <div>Suporte Técnico</div>
+        <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+        <div>Comunicação</div>
+        <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+      </section>
+      <section>
+        <h2>Certificações</h2>
+        <ul>
+          <li>Curso de Redes com Mikrotik</li>
+          <li>Curso de Segurança da Informação</li>
+          <li>Certificado de Ética Hacker (básico)</li>
+        </ul>
+      </section>
+    </div>
 
-    <section>
-      <h2>Experiência Profissional</h2>
-      <p><strong>Técnico de Informática</strong> · JRB Prime (Atual, quase 2 anos)</p>
-    </section>
+    <div class="middle">
+      <section>
+        <h2>Quem sou eu</h2>
+        <p>Trabalho há 2 anos com suporte de TI remoto e presencial. Desenvolvi habilidades sólidas em comunicação técnica e profissional com clientes e colegas. Tenho experiência com redes (Mikrotik, pfSense, Sophos), suporte técnico e segurança digital. Atualmente estudo Ciência da Computação e busco aprimorar constantemente minhas habilidades como programador e profissional de infraestrutura.</p>
+      </section>
+      <section>
+        <h2>Projetos</h2>
+        <ul>
+          <li><strong>Firewall Monitor:</strong> Sistema de monitoramento em tempo real para firewalls pfSense e Mikrotik, com alertas e relatórios automáticos.</li>
+          <li><strong>Sistema de Biblioteca Local:</strong> Aplicação desktop para controle de empréstimos e cadastro de usuários, desenvolvida em Python com banco SQLite.</li>
+          <li><strong>DiscordBot Manager:</strong> Bot multifuncional para Discord com moderação, música e integração com APIs de inteligência artificial.</li>
+          <li><strong>Portfólio Web Pessoal:</strong> Site responsivo e moderno, desenvolvido em HTML e CSS puros, focado em performance e clareza.</li>
+        </ul>
+      </section>
+    </div>
 
-    <section>
-      <h2>Educação</h2>
-      <p><strong>Faculdade Unopar</strong> · Ciência da Computação (3º semestre)</p>
-      <p><strong>SENAC/PR</strong> · Manutenção de Computadores e Redes (2023)</p>
-    </section>
-
-    <section>
-      <h2>Projetos</h2>
-      <ul>
-        <li>Bots para Discord</li>
-        <li>Gerenciador de livros</li>
-        <li>Este site</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Habilidades</h2>
-      <ul>
-        <li>Segurança Digital</li>
-        <li>Administração de Redes</li>
-        <li>Programação (Python, JavaScript, HTML/CSS)</li>
-        <li>Suporte Técnico</li>
-        <li>Gerenciamento de servidores</li>
-        <li>Comunicação com cliente</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Links</h2>
-      <div class="links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Outro Link</a>
-      </div>
-    </section>
-
-    <section>
-      <h2>Certificações</h2>
-      <ul>
-        <li>Curso de Redes com Mikrotik</li>
-        <li>Curso de Segurança da Informação</li>
-        <li>Certificado de Ética Hacker (básico)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Soft Skills</h2>
-      <ul>
-        <li>Trabalho em equipe</li>
-        <li>Resolução de problemas</li>
-        <li>Organização e disciplina</li>
-        <li>Capacidade analítica</li>
-        <li>Vontade constante de aprender</li>
-      </ul>
-    </section>
+    <div class="side">
+      <section>
+        <h2>Links</h2>
+        <div class="links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+        </div>
+      </section>
+      <section>
+        <h2>Educação</h2>
+        <p><strong>Faculdade Unopar</strong><br />Ciência da Computação (3º semestre)</p>
+        <p><strong>SENAC/PR</strong><br />Manutenção de Computadores e Redes (2023)</p>
+      </section>
+      <section>
+        <h2>Soft Skills</h2>
+        <ul>
+          <li>Trabalho em equipe</li>
+          <li>Resolução de problemas</li>
+          <li>Organização e disciplina</li>
+          <li>Capacidade analítica</li>
+          <li>Vontade constante de aprender</li>
+        </ul>
+      </section>
+    </div>
   </main>
   <footer>
     © 2025 João Vithor Toporoski Araújo — Todos os direitos reservados
